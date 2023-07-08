@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script/interface.js"></script>
+    <!--<script src="script/Aula02/polimorfismo.js"></script>-->
+    <title>TypeScript</title>
+</head>
+
+<body onload="adicionaDados()">
+    <main>
+        <h1>Aula 01 - TypeScript</h1>
+        <h2>H&aacute; v&aacute;rios projetos usam TypeScript para cria&ccedil;&atilde;o</h2>
+
+        <div>
+            <label for="txtValor"></label>
+            <input type="number" name="txtValor" id="txtValor">
+        </div>
+        <div>
+            <button onclick="c.depositar(parseFloat(document.querySelector('#txtValor').value))">Depositar</button>
+            <button onclick="c.sacar(parseFloat(document.querySelector('#txtValor').value))">Sacar</button>
+            <button onclick="c.exibeSaldo()">Ver Saldo</button>
+        </div>
+
+        <div id="retorno"></div>
+        <script src="script/classe.js"></script>
+        <hr>
+        <fieldset>
+            <legend>E-Commerce</legend>
+            <div>
+                <label for="txtQtdeProd">Quantidade de Produtos</label>
+                <input type="text" name="txtQtdeProd" id="txtQtdeProd" placeholder="Quantidade de Produtos">
+                <button id="qtdeProd"
+                    onclick="parseInt(prod.efetuaVenda(document.getElementById('txtQtdeProd').value))">Vender</button>
+            </div>
+            <div>
+                <label for="txtQtdeServ">Quantidade de Serviços</label>
+                <input type="text" name="txtQtdeServ" id="txtQtdeServ" placeholder="Quantidade de Serviços">
+                <button id="qtdeServ" onclick="parseInt(serv.efetuaVenda(document.getElementById('txtQtdeServ')))">Vender</button>
+            </div>
+            <div>
+               <div>Total a pagar: <label id="vlPagar"></label></div> 
+            </div>
+
+            <div id="qtdProduto">
+                <label>Estoque: 100</label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Classificação Pessoal</legend>
+            <label for="txtTipoPessoa">Tipo de Pessoa</label>
+            <select name="txtTipoPessoa" id="txtTipoPessoa">
+                <option value="0">Selecione</option>
+            </select>
+        </fieldset>
+        <script src="script/controleVendas.js"></script>
+        <script src="script/enumTP.js"></script>
+    </main>
+</body>
+
+</html>
